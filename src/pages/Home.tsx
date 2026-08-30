@@ -1,9 +1,15 @@
 import { TechnologyCard } from '../components/TechnologyCard'
+import { ThemeToggle } from '../components/ThemeToggle'
 import { technologies } from '../data/technologies'
+import { useTheme } from '../hooks/useTheme'
 
 export function Home() {
+  const { theme, toggleTheme } = useTheme()
+
   return (
     <main className="home">
+      <ThemeToggle theme={theme} onToggle={toggleTheme} />
+
       <header className="home__header">
         <h1>BETO.</h1>
         <p>Data · Systems · Development</p>
