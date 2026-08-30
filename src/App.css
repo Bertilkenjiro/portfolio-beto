@@ -9,6 +9,42 @@
   padding: 96px 0 48px;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.theme-toggle {
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  position: absolute;
+  top: 48px;
+  right: 0;
+  color: var(--color-muted);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  color: var(--color-text);
+  border-color: var(--color-border-hover);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 3px;
+}
+
+.theme-toggle svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .home__header h1 {
@@ -60,7 +96,7 @@
 }
 
 a.technology-card:hover {
-  border-color: #b8b8b8;
+  border-color: var(--color-border-hover);
 }
 
 a.technology-card:focus-visible {
@@ -88,7 +124,7 @@ a.technology-card:focus-visible {
 }
 
 .technology-card--disabled {
-  color: #8a8a8a;
+  color: var(--color-disabled);
   background: transparent;
 }
 
@@ -106,6 +142,10 @@ a.technology-card:focus-visible {
   .home {
     width: min(100% - 32px, 640px);
     padding-top: 64px;
+  }
+
+  .theme-toggle {
+    top: 24px;
   }
 
   .technologies {
